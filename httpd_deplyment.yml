@@ -1,0 +1,17 @@
+- name: Install and start apache HTTPD
+  hosts: 192.168.147.139 
+  tasks: 
+    - name: httpd package isntallation 
+      yum:
+        name: httpd 
+        state: present 
+    - name: transfer of index.html files 
+      copy:
+       src: /root/files/index.html
+       dest: /var/www/html/index.html
+    - name: httpd starting process initalisation 
+      service:
+        name: httpd
+        state: started
+        enabled: true
+
