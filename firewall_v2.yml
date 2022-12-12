@@ -1,0 +1,10 @@
+- name: Checking firewall status
+  hosts: 192.168.147.139
+  become: yes
+  tasks: 
+    - name: latest version of firewalld
+      service:
+        name: firewalld
+        enabled: true
+        state: started
+
