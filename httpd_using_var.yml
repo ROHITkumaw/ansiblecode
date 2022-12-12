@@ -1,0 +1,11 @@
+- name: Installing httpd using variable
+  hosts: 192.168.147.139
+  vars: 
+    web_pkg: httpd
+  tasks:
+    - name: Required package should be installed
+      yum: 
+       name: 
+         - "{{web_pkg}}"
+       state: latest
+   
