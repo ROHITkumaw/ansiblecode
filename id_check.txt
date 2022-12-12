@@ -1,0 +1,3 @@
+192.168.147.139 | CHANGED | rc=0 >>
+uid=1001(rahul) gid=1001(rahul) groups=1001(rahul),1002(ram)
+ansible all -m shell -a id rahul
