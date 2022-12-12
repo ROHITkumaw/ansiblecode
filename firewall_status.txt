@@ -1,0 +1,2 @@
+
+ansible all -m shell -a if ! systemctl is-active firewalld; then  echo 'inactive';  fi
